@@ -1,0 +1,51 @@
+<div class="container mt-5" style="max-width: 800px;">
+  <h2 class="mb-4">Painel Administrativo - MASFGROOVE TECNOLOGIA</h2>
+
+  <!-- Formulário -->
+  <div class="card p-4 mb-4 shadow-sm">
+    <div class="mb-3">
+      <label class="form-label">Nome</label>
+      <input type="text" [(ngModel)]="cadastro.nome" name="nome" placeholder="Digite o nome" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">E-mail</label>
+      <input type="email" [(ngModel)]="cadastro.email" name="email" placeholder="Digite o e-mail" class="form-control">
+    </div>
+    <div class="mb-3" *ngIf="btnCadastrar">
+      <label class="form-label">Senha</label>
+      <input type="password" [(ngModel)]="cadastro.senha" name="senha" placeholder="Digite a senha" class="form-control">
+    </div>
+    
+    <div>
+      <button *ngIf="btnCadastrar" (click)="salvar()" class="btn btn-success me-2">Cadastrar</button>
+      <button *ngIf="!btnCadastrar" (click)="salvar()" class="btn btn-primary me-2">Alterar</button>
+      <button *ngIf="!btnCadastrar" (click)="limpar()" class="btn btn-secondary">Cancelar</button>
+    </div>
+  </div>
+
+  <!-- Tabela -->
+  <table class="table table-striped table-hover shadow-sm">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of cadastros">
+        <td>{{ c.id }}</td>
+        <td>{{ c.nome }}</td>
+        <td>{{ c.email }}</td>
+        <td>
+          <button (click)="selecionarCadastro(c)" class="btn btn-warning btn-sm me-2 text-white">Selecionar</button>
+          <button (click)="remover(c.id!)" class="btn btn-danger btn-sm">Remover</button>
+        </td>
+      </tr>
+      <tr *ngIf="cadastros.length === 0">
+        <td colspan="4" class="text-center text-muted">Nenhum registo encontrado.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
