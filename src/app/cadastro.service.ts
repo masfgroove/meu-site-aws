@@ -7,23 +7,23 @@ import { Cadastro } from './cadastro.model';
   providedIn: 'root'
 })
 export class CadastroService {
-  private url = 'http://3.129.44.20:8081/cadastros';
+  private url = 'http://3.129.44.20:8081';
 
   constructor(private http: HttpClient) {}
 
   listar(): Observable<Cadastro[]> {
-    return this.http.get<Cadastro[]>(this.url);
+    return this.http.get<Cadastro[]>(`${this.url}/cadastros`);
   }
 
   cadastrar(obj: Cadastro): Observable<Cadastro> {
-    return this.http.post<Cadastro>(this.url, obj);
+    return this.http.post<Cadastro>(`${this.url}/cadastros`, obj);
   }
 
   alterar(obj: Cadastro): Observable<Cadastro> {
-    return this.http.put<Cadastro>(this.url, obj);
+    return this.http.put<Cadastro>(`${this.url}/cadastros`, obj);
   }
 
   remover(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.url}/${id}`);
+    return this.http.delete<void>(`${this.url}/cadastros/${id}`);
   }
 }
