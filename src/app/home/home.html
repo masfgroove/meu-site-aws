@@ -1,0 +1,96 @@
+<!-- Menu Superior / Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 shadow-sm sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="#" style="color: #22d3ee;">
+      🚀 MASFGROOVE TECNOLOGIA
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav gap-3 align-items-center">
+        <li class="nav-item"><a class="nav-link active text-white" href="#">Início</a></li>
+        <li class="nav-item"><a class="nav-link text-secondary" href="#destaques">Destaques</a></li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-info px-3 rounded-pill fw-bold text-dark" routerLink="/painel" style="background-color: #22d3ee; border: none;">
+            Painel Admin
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Conteúdo Principal / Blog de Afiliados -->
+<main class="container my-5" style="min-height: 70vh;">
+  
+  <!-- Cabeçalho do Blog -->
+  <section class="text-center mb-5">
+    <span class="badge bg-info text-dark px-3 py-2 mb-2 fw-bold font-monospace">BLOG DE RECOMENDAÇÕES</span>
+    <h1 class="display-5 fw-bold text-white">Achados & Produtos em <span style="color: #22d3ee;">Destaque</span></h1>
+    <p class="text-secondary lead mx-auto" style="max-width: 600px;">
+      Seleção exclusiva de produtos testados e recomendados para impulsionar o teu dia a dia com tecnologia e qualidade.
+    </p>
+  </section>
+
+  <!-- Post / Artigo do Produto do Mercado Livre -->
+  <div class="row justify-content-center" id="destaques">
+    <div class="col-lg-8">
+      <div class="card border border-secondary shadow-lg rounded-4 overflow-hidden text-light" style="background-color: #0f172a;">
+        <div class="row g-0 align-items-center">
+          
+          <!-- Imagem do Produto do Mercado Livre -->
+          <div class="col-md-5 p-4 text-center bg-white d-flex align-items-center justify-content-center">
+            <img 
+              src="https://http2.mlstatic.com/D_NQ_NP_2X_784322-MLB75123456789_032024-F.webp" 
+              alt="Produto Mercado Livre" 
+              class="img-fluid rounded shadow-sm"
+              style="max-height: 250px; object-fit: contain;"
+              onerror="this.src='https://via.placeholder.com/300?text=Produto+Mercado+Livre';"
+            >
+          </div>
+
+          <!-- Informações / Texto do Blog -->
+          <div class="col-md-7 p-4 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-warning text-dark fw-bold">Parceiro Oficial ML</span>
+                <small class="text-muted font-monospace">Recomendação do Dia</small>
+              </div>
+              <h3 class="fw-bold text-white mb-3 h4">Nome do Produto Incrível do Mercado Livre</h3>
+              <p class="text-secondary small line-clamp-3 mb-4">
+                Aproveita esta super oportunidade com envio rápido e garantia. O melhor custo-benefício selecionado diretamente para os leitores do nosso blog. Garanta já o seu com desconto exclusivo!
+              </p>
+            </div>
+
+            <!-- Botão de Afiliado -->
+            <div>
+              <a 
+                href="COLE_O_TEU_LINK_DE_AFILIADO_AQUI" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-warning w-100 fw-bold py-2 shadow-sm d-flex align-items-center justify-content-center gap-2"
+                style="background-color: #fbbf24; border: none; color: #000;"
+              >
+                🛒 Comprar no Mercado Livre
+              </a>
+              <small class="d-block text-center text-muted mt-2" style="font-size: 0.75rem;">
+                *Link de afiliado oficial. Você não paga nada a mais por isso.
+              </small>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-center text-muted py-4 border-top border-secondary mt-auto">
+  <div class="container">
+    <p class="mb-1 text-light fw-bold">MASFGROOVE TECNOLOGIA & E-COMMERCE</p>
+    <p class="small mb-0">© 2026 Todos os direitos reservados. Desenvolvido com Angular & Bootstrap.</p>
+  </div>
+</footer>
